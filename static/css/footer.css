@@ -1,0 +1,28 @@
+#footer-row1{
+    margin-top: 80px;
+    padding: 1.2em 0;
+    background: #000;
+    bottom: 0;
+    margin-right: -33px;
+    font-family: "Fjalla One", Verdana, Geneva, sans-serif;
+    font-size: 0.95em;   
+}
+
+.copyright{
+    text-align: center;
+    color: #000;
+}
+
+
+#footer {
+    margin-top: 80px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #c2bfbc;
+    color: black;
+    text-align: center;
+    font-family: "Fjalla One", Verdana, Geneva, sans-serif;
+    font-size: 0.95em;  
+  }

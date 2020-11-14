@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #ddd;
+            align-items: center;
+        }
+
+        .text {
+            width: 95%;
+            margin: 10px auto 0 auto;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 10px;
+        }
+
+        li {
+            counter-increment: index;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            padding: 12px 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            padding: 0;
+            max-width: 60rem;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <ul class="text">
+        <li class="list">
+            <span class="date">&#8195 May 23, 2020 &#8195</span>
+            <a class="name" href="http://192.168.0.191/piapp/Setup">How to setup a Raspberry Pi</a>
+        </li>
+    </ul>
+
+    <style jsx>
+        @media (min-width: 500px) {
+            body {
+                max-width: 50rem;
+                margin: auto;
+                padding: 10px 10px 0 10px;
+            }
+        }
+    </style>
+
+</body>
+
+</html>

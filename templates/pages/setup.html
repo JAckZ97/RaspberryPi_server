@@ -1,0 +1,201 @@
+{% include 'navbar.html' %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>How to setup a Raspberry Pi</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #ddd;
+        }
+
+        .text {
+            width: 95%;
+            margin: 10px auto 0 auto;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 10px;
+            padding: 0 0 2rem 0;
+        }
+
+        .text h2,
+        .text h3 {
+            font-size: 30px;
+            padding: 10px 0 10px;
+            border-bottom: 1px solid #333;
+            margin-bottom: 15px;
+        }
+
+        .text h2 {
+            font-size: 30px;
+            line-height: 42px;
+        }
+
+        .text h3 {
+            font-size: 24px;
+            line-height: 34px;
+        }
+
+        .text p {
+            padding: 10px 0;
+        }
+
+        .text img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .link a {
+            font-size: 30px;
+            padding: 10px 0 10px;
+            border-bottom: 1px solid #333;
+            margin-bottom: 15px;
+            font-size: 30px;
+            line-height: 42px;
+        }
+
+        .code-container {
+            background: black;
+            max-width: 700px;
+            margin: auto;
+            padding: 10px;
+            overflow: auto;
+        }
+
+        .code-container p {
+            color: #ddd;
+            padding: 10px 0;
+        }
+
+        #footer {
+            margin-top: 80px;
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #c2bfbc;
+            color: black;
+            text-align: center;
+            font-family: "Fjalla One", Verdana, Geneva, sans-serif;
+            font-size: 0.95em;
+            padding: 1.2em 0;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="text">
+        <h2>How to setup a Raspberry Pi</h2>
+        <p>First you need to have a Raspberry Pi, and the one I use is Raspberry Pi zero w version, which is one of the
+            cheapest Raspberry Pi you can find in the market. It looks like down below, and you can buy from <a
+                href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">HERE</a> ,which only cost you 10
+            dollar.</p>
+        <img
+            src="https://www.raspberrypi.org/homepage-9df4b/static/2a2c7a0b78b33fdfd5003ecc30c5728d/052d8/91d73c36c55cc0e4cea3ba9fe128d992382b7a55_pi-zero-w-1-1620x1080.jpg" />
+
+        <p>You also need an extra SD card for store the OS for your Raspberry Pi and all the other datas, I think 8G
+            will be enough.</p>
+
+        <h3>Now you are ready to move to software</h3>
+        <p>First you need to <a href="https://www.raspberrypi.org/downloads/raspbian/"> Download</a> the OS like
+            Raspbian
+            for your Pi. The reason I choose Raspbian Buster Lite due to its lighter weight, and this is the main reason
+            that I didn't choose Raspbian Buster with desktop. Because I have Pi zero not Pi 3b or 4b, the hardware
+            limitation are there.
+        </p>
+
+        <img
+            src="https://raw.githubusercontent.com/JAckZ97/RaspberryPi_server/master/img/raspbian%20buster%20lite.png" />
+
+        <p>
+            After you download the zip file, just decompressed into img file and flash it into the new SD card by
+            balena, which is works for me on MacOS. Download from <a href="https://www.balena.io/etcher/">HERE</a>.
+        </p>
+
+        <img src="https://raw.githubusercontent.com/JAckZ97/RaspberryPi_server/master/img/flash%20image%20writer.png" />
+
+        <p>
+            After this, I personally recommand you guys download these two file, which help you to setup ssh and wifi
+            before you insert the SD card on your Raspberry Pi (MAKE SURE YOU CHANGE wpa_supplicant.conf FILE into your
+            personal WIFI name and password, and try to use 2.4GHz WIFI instead of 5GHz). Download <a
+                href="https://drive.google.com/open?id=1J4EDUn8moivU0z8KH9rDQ5uMZ_m5S99i">HERE</a>
+        </p>
+
+        <img src="https://raw.githubusercontent.com/JAckZ97/RaspberryPi_server/master/img/wifi_conf_file.png" />
+
+        <h3>Now you are ready to insert the SD card and boot up your Pi</h3>
+        <p>
+            After insert your card and power it on, you will see it setup by itself and if it ask you about user name
+            and password, it will be "pi" for the user name and "raspberry" for password. <a
+                href="https://www.raspberrypi.org/forums/viewtopic.php?t=39518">Details</a>
+        </p>
+
+        <img src="https://raw.githubusercontent.com/JAckZ97/RaspberryPi_server/master/img/setup.jpg" />
+
+        <p>
+            You can ssh to your Pi now by following command in your Mac terminal.
+        <div class="code-container">
+            <p>"ssh pi@your-pi-ip"</p>
+        </div>
+
+        </p>
+
+        <p>
+            Now you are ready to go!! Congrat!!
+        </p>
+
+        <h3>Some useful command for beginner:</h3>
+        <a class="link">
+            <li>
+                <a href="https://raspberrypi.stackexchange.com/questions/381/how-do-i-turn-off-my-raspberry-pi">How do I
+                    turn off my Raspberry Pi?</a>
+            </li>
+            <li>
+                <a href="https://www.tecmint.com/10-most-dangerous-commands-you-should-never-execute-on-linux/">10 Most
+                    Dangerous Commands – You Should Never Execute on Linux</a>
+            </li>
+            <li>
+                <a href="https://www.howtogeek.com/423214/how-to-use-the-rename-command-on-linux/">How to Use the rename
+                    Command on Linux</a>
+            </li>
+            <li>
+                <a href="https://www.lifewire.com/raspberry-pi-terminal-commands-4054108">20 Handy Raspberry Pi Terminal
+                    Commands for Beginners</a>
+            </li>
+        </a>
+
+
+
+    </div>
+
+    <div id="footer">
+        <p>#COPYRIGHT#&COPY;Design by JAck Zhang</p>
+    </div>
+
+    <style jsx>
+        @media (min-width: 500px) {
+            body {
+                max-width: 50rem;
+                margin: auto;
+                padding: 10px 10px 0 10px;
+            }
+        }
+    </style>
+
+</body>
+
+</html>
